@@ -28,4 +28,11 @@ RSpec.describe "count_words method" do
       expect(result).to eq 3
     end
   end
+
+  context "if some words are separated by ' - ' and some by '-'" do
+    it "returns the number of words" do
+      result = count_words("one two - three four-five")
+      expect(result).to eq 5
+    end
+  end
 end
